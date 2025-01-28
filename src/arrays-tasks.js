@@ -21,7 +21,7 @@
  *    getIntervalArray(3, 3) => [ 3 ]
  */
 function getIntervalArray(start, end) {
-  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+  return Array.from({ length: end - start + 1 }, (i) => start + i);
 }
 
 /**
@@ -43,7 +43,7 @@ function sumArrays(arr1, arr2) {
 
   return Array.from(
     { length: maxLength },
-    (_, i) => (arr1[i] || 0) + (arr2[i] || 0)
+    (i) => (arr1[i] || 0) + (arr2[i] || 0)
   );
 }
 
@@ -256,7 +256,7 @@ function toStringList(arr) {
  *   distinct([]) => []
  */
 function distinct(arr) {
-  return [...new Set(arr)];
+  return new Set(arr);
 }
 
 /**
@@ -502,9 +502,7 @@ function findCommonElements(arr1, arr2) {
  *    findLongestIncreasingSubsequence([3, 10, 2, 1, 20]) => longest is [3, 10] and [1, 20] => 2
  *    findLongestIncreasingSubsequence([50, 3, 10, 7, 40, 80]) => longest is [7, 40, 80] => 3
  */
-function findLongestIncreasingSubsequence(/* nums */) {
-  throw new Error('Not implemented');
-}
+function findLongestIncreasingSubsequence(nums) { }
 
 /**
  * Propagates every item in sequence its position times
